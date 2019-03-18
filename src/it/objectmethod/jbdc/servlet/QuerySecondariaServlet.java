@@ -17,7 +17,7 @@ public class QuerySecondariaServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		//salvataggio parametro da input utente
-		String chiavenat=request.getParameter("continente").toString();
+		String chiavenat=request.getParameter("continente").toString(); //TODO ToString non serve
 
 		IDaoNazioni daoNazioni = new DaoNazioni();
 		List<Nazione> list = daoNazioni.getAllNazioni(chiavenat);

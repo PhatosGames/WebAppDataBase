@@ -1,9 +1,9 @@
 package it.objectmethod.jbdc.dao.impl;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +18,7 @@ public class DaoCitta implements IDaoCitta {
 	public List<Citta> getAllCitta(String chiavecit) {
 
 		List<Citta> list = new ArrayList<Citta>();
-		Statement stmt = null;
+		PreparedStatement stmt = null;
 		Connection conn = ConnectionManager.getConnection();
 		
 		try {
@@ -27,10 +27,12 @@ public class DaoCitta implements IDaoCitta {
 			String sql = "SELECT C.Name as citname , C.District as citcode , C.population as citpop" + 
 					" FROM CITY C" + 
 					" join country ON C.CountryCode=Country.Code" + 
-					" Where country.name ='"+chiavecit+"'";
+					" Where country.name = ?"; //TODO non va bene usare come chiave il nome della nazione.
 
-			stmt = conn.createStatement();
-			ResultSet rs = stmt.executeQuery(sql);
+			stmt = conn.prepareStatement(sql);
+			stmt.setString(1, chiavecit);
+			
+			ResultSet rs = stmt.executeQuery();
 
 			while (rs.next()) {
 				Citta n = new Citta();

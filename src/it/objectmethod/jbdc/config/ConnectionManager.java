@@ -1,5 +1,5 @@
 package it.objectmethod.jbdc.config;
-//ciao
+//modificato da Ivan
 import java.sql.Connection;
 import java.sql.DriverManager;
 

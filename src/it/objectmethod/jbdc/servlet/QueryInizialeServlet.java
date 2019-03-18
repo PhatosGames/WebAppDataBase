@@ -12,7 +12,7 @@ import it.objectmethod.jbdc.dao.IDaoContinenti;
 import it.objectmethod.jbdc.dao.impl.DaoContinenti;
 import it.objectmethod.jbdc.model.Continente;
 
-public class QueryInizialeServlet  extends HttpServlet {
+public class QueryInizialeServlet  extends HttpServlet { //TODO nome servlet non va bene
 
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)

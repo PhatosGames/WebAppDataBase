@@ -1,9 +1,11 @@
 package it.objectmethod.jbdc.model;
 
 public class Citta {
-	private String citname;
+	
+	private String citname; //TODO Notazione camelCase, prima lettera minuscola e ogni volta che cambia la parola uso la lettera maiuscola.
 	private int citpop;
 	private String citcode;
+	
 	public String getCitname() {
 		return citname;
 	}
@@ -14,14 +16,13 @@ public class Citta {
 		return citpop;
 	}
 	public void setCitpop(int citpop) {
-		this.citpop=citpop;
+		this.citpop = citpop;
 	}
 	public String getCitcode() {
 		return citcode;
 	}
 	public void setCitcode(String citcode) {
-		this.citcode=citcode;
+		this.citcode = citcode;
 	}
-
-
+	
 }

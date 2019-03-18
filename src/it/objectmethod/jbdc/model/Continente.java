@@ -1,6 +1,6 @@
 package it.objectmethod.jbdc.model;
 
-public class Continente {
+public class Continente { //TODO Eliminare
 	private String continent;
 //	private long pop;
 	public String getContinent() {
