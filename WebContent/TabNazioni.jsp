@@ -15,9 +15,8 @@ body {
 </head>
 <body>
 	<c:forEach items="${nazioni}" var="n">
-		<a
-			href="http://localhost:8080/WebAppDataBase/terzo?nazione=${n.natname}">${n.natname}</a>
-		<p>${n.natpop}</p>
+    <a href="http://localhost:8080/WebAppDataBase/terzo?nazione=${n.nomeNazione}&countrycode=${n.codiceNazione}">${n.nomeNazione}</a>
+	<p>${n.popolazioneNazione}</p>
 	</c:forEach>
 </body>
 </html>

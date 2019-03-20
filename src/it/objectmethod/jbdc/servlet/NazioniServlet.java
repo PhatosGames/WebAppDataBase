@@ -12,15 +12,15 @@ import it.objectmethod.jbdc.dao.IDaoNazioni;
 import it.objectmethod.jbdc.dao.impl.DaoNazioni;
 import it.objectmethod.jbdc.model.Nazione;
 
-public class QuerySecondariaServlet extends HttpServlet {
+public class NazioniServlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		//salvataggio parametro da input utente
-		String chiavenat=request.getParameter("continente").toString(); //TODO ToString non serve
+
+		String codiceNazione=request.getParameter("continente");
 
 		IDaoNazioni daoNazioni = new DaoNazioni();
-		List<Nazione> list = daoNazioni.getAllNazioni(chiavenat);
+		List<Nazione> list = daoNazioni.getAllNazioni(codiceNazione);
 		request.setAttribute("nazioni", list);
 		request.getRequestDispatcher("/TabNazioni.jsp").forward(request, response);
 

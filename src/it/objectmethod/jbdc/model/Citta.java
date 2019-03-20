@@ -1,28 +1,43 @@
 package it.objectmethod.jbdc.model;
 
 public class Citta {
-	
-	private String citname; //TODO Notazione camelCase, prima lettera minuscola e ogni volta che cambia la parola uso la lettera maiuscola.
-	private int citpop;
-	private String citcode;
-	
-	public String getCitname() {
-		return citname;
+
+	private String nomeCitta; 
+	private int popolazioneCitta;
+	private String codiceCitta;
+	private int idCitta;
+	private String codiceNazione;
+	public String getNomeCitta() {
+		return nomeCitta;
 	}
-	public void setCitname(String citname) {
-		this.citname = citname;
+	public void setNomeCitta(String nomeCitta) {
+		this.nomeCitta = nomeCitta;
 	}
-	public int getCitpop() {
-		return citpop;
+	public int getPopolazioneCitta() {
+		return popolazioneCitta;
 	}
-	public void setCitpop(int citpop) {
-		this.citpop = citpop;
+	public void setPopolazioneCitta(int popolazioneCitta) {
+		this.popolazioneCitta = popolazioneCitta;
 	}
-	public String getCitcode() {
-		return citcode;
+	public String getCodiceCitta() {
+		return codiceCitta;
 	}
-	public void setCitcode(String citcode) {
-		this.citcode = citcode;
+	public void setCodiceCitta(String codiceCitta) {
+		this.codiceCitta = codiceCitta;
 	}
-	
+	public int getIdCitta() {
+		return idCitta;
+	}
+	public void setIdCitta(int idCitta) {
+		this.idCitta = idCitta;
+	}
+	public String getCodiceNazione() {
+		return codiceNazione;
+	}
+	public void setCodiceNazione(String codiceNazione) {
+		this.codiceNazione = codiceNazione;
+	}
+
+
+
 }

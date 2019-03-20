@@ -20,9 +20,9 @@ public class DaoContinenti implements IDaoContinenti {
 		Statement stmt = null;
 		Connection conn = ConnectionManager.getConnection();
 		try {
-			
-			String sql = "SELECT C.continent" + 
-					" FROM country C\r\n" + 
+
+			String sql = "SELECT C.Continent as continent" + 
+					" FROM country C" + 
 					" GROUP BY C.Continent";
 
 			stmt = conn.createStatement();
@@ -31,8 +31,6 @@ public class DaoContinenti implements IDaoContinenti {
 			while (rs.next()) {
 				Continente n = new Continente();
 				n.setContinent(rs.getString("continent"));
-//				n.setPop(rs.getLong("pop"));
-				
 				list.add(n);
 			}
 

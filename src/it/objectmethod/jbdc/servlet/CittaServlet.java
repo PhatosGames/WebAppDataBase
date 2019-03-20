@@ -11,14 +11,15 @@ import javax.servlet.http.HttpServletResponse;
 import it.objectmethod.jbdc.dao.IDaoCitta;
 import it.objectmethod.jbdc.dao.impl.DaoCitta;
 import it.objectmethod.jbdc.model.Citta;
-public class QueryTerziariaServlet extends HttpServlet {
+public class CittaServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		//salvataggio parametro da input utente
-		String chiavecit=request.getParameter("nazione").toString();
 
+
+		String codiceNazione=request.getParameter("countrycode");
 		IDaoCitta daoCitta = new DaoCitta();
-		List<Citta> list = daoCitta.getAllCitta(chiavecit);
+		List<Citta> list = daoCitta.getCittaByCodiceNazione(codiceNazione);
 		request.setAttribute("citta", list);
 		request.getRequestDispatcher("/TabCitta.jsp").forward(request, response);
 	}

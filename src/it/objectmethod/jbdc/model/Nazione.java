@@ -1,20 +1,26 @@
 package it.objectmethod.jbdc.model;
 
 public class Nazione {
-	private String natname;
-	private int natpop;
-	public String getNatname() {
-		return natname;
+	private String nomeNazione;
+	public String codiceNazione;
+	private int popolazioneNazione;
+	public String getNomeNazione() {
+		return nomeNazione;
 	}
-	public void setNatname(String natname) {
-		this.natname = natname;
+	public void setNomeNazione(String nomeNazione) {
+		this.nomeNazione = nomeNazione;
 	}
-	public int getNatpop() {
-		return natpop;
+	public int getPopolazioneNazione() {
+		return popolazioneNazione;
 	}
-	public void setNatpop(int natpop) {
-		this.natpop=natpop;
+	public void setPopolazioneNazione(int popolazioneNazione) {
+		this.popolazioneNazione=popolazioneNazione;
 	}
-
-
+	public String getCodiceNazione() {
+		return codiceNazione;
+	}
+	public void setCodiceNazione(String codiceNazione) {
+		this.codiceNazione = codiceNazione;
+	}
 }
+

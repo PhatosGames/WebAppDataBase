@@ -6,6 +6,6 @@ import it.objectmethod.jbdc.model.Nazione;
 
 public interface IDaoNazioni {
 
-	public List<Nazione> getAllNazioni(String chiavenat);
-
+	public List<Nazione> getAllNazioni(String codiceContinente);
+	public List<String> getAllCodici ();
 }

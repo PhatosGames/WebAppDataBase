@@ -8,7 +8,7 @@
 
 	<servlet>
 		<servlet-name>query</servlet-name>
-		<servlet-class>it.objectmethod.jbdc.servlet.QueryInizialeServlet</servlet-class>
+		<servlet-class>it.objectmethod.jbdc.servlet.ContinentiServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>query</servlet-name>
@@ -16,21 +16,37 @@
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>nazioni</servlet-name>
-		<servlet-class>it.objectmethod.jbdc.servlet.QuerySecondariaServlet</servlet-class>
+		<servlet-class>it.objectmethod.jbdc.servlet.NazioniServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>nazioni</servlet-name>
 		<url-pattern>/secondo</url-pattern>
 	</servlet-mapping>
-		<servlet>
+	<servlet>
 		<servlet-name>citta</servlet-name>
-		<servlet-class>it.objectmethod.jbdc.servlet.QueryTerziariaServlet</servlet-class>
+		<servlet-class>it.objectmethod.jbdc.servlet.CittaServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>citta</servlet-name>
 		<url-pattern>/terzo</url-pattern>
 	</servlet-mapping>
-	
-	
+	<servlet>
+		<servlet-name>eliminacitta</servlet-name>
+		<servlet-class>it.objectmethod.jbdc.servlet.EliminaCittaServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>eliminacitta</servlet-name>
+		<url-pattern>/eliminacitta</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>cerca</servlet-name>
+		<servlet-class>it.objectmethod.jbdc.servlet.RicercaServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cerca</servlet-name>
+		<url-pattern>/ricerca</url-pattern>
+	</servlet-mapping>
+
+
 
 </web-app>
